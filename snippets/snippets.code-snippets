@@ -40,20 +40,6 @@
         ],
         "description": "let mut"
     },
-    "pub-let":{
-        "prefix": "pl",
-        "body": [
-            "pub let ${1:name}: ${2:type} = ${3:value};"
-        ],
-        "description": "public let"
-    },
-    "pub-let-mut": {
-        "prefix": "plm",
-        "body": [
-            "pub let mut ${1:name}: ${2:type} = ${3:value};"
-        ],
-        "description": "public let mut"
-    },
     "if-let":{
         "prefix": "il",
         "body": [
