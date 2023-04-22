@@ -92,15 +92,6 @@
         ],
         "description": "match expression with else"
     },
-    "if": {
-        "prefix": "if",
-        "body": [
-            "if ${1:condition} {",
-            "\t$2",
-            "}"
-        ],
-        "description": "if expression"
-    },
     "if-else": {
         "prefix": "ie",
         "body": [
@@ -226,15 +217,6 @@
         ],
         "description": "public impl for"
     },
-    "pub-impl-for-where" : {
-        "prefix": "pifw",
-        "body": [
-            "pub impl ${1:Trait} for ${2:Type} where ${3:condition} {",
-            "\t$4",
-            "}"
-        ],
-        "description": "public impl for where"
-    },
     "pub-impl-generic": {
         "prefix": "pig",
         "body": [
@@ -270,15 +252,6 @@
             "}"
         ],
         "description": "impl for"
-    },
-    "impl-for-where": {
-        "prefix": "ifw",
-        "body": [
-            "impl ${1:Trait} for ${2:Type} where ${3:condition} {",
-            "\t$4",
-            "}"
-        ],
-        "description": "impl for where"
     },
     "impl": {
         "prefix": "i",
