@@ -1,8 +1,14 @@
 {
   "name": "coderusty-snippets",
   "displayName": "CodeRusty Snippets",
-  "description": "",
+  "description": "Snippets for Rust Lang",
+  "author": {"name": "Danila Verbinskiy", "email": "work.danv4656@gmail.com"},
+  "icon": "icon.png",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hikionori/coderusty-snippets.git"
+  },
   "engines": {
     "vscode": "^1.77.0"
   },

@@ -1,1 +1,508 @@
-{}
+{
+    "pub-fn":{
+        "prefix": "pf",
+        "body": [
+            "pub fn ${1:name}(${2:args}) -> ${3:ret} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public function"
+    },
+    "async-pub-fn":{
+        "prefix": "apf",
+        "body": [
+            "pub async fn ${1:name}(${2:args}) -> ${3:ret} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public async function"
+    },
+    "async-fn":{
+        "prefix": "af",
+        "body": [
+            "async fn ${1:name}(${2:args}) -> ${3:ret} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "async function"
+    },
+    "let": {
+        "prefix": "l",
+        "body": [
+            "let ${1:name}: ${2:type} = ${3:value};"
+        ],
+        "description": "let"
+    },
+    "let-mut": {
+        "prefix": "lm",
+        "body": [
+            "let mut ${1:name}: ${2:type} = ${3:value};"
+        ],
+        "description": "let mut"
+    },
+    "pub-let":{
+        "prefix": "pl",
+        "body": [
+            "pub let ${1:name}: ${2:type} = ${3:value};"
+        ],
+        "description": "public let"
+    },
+    "pub-let-mut": {
+        "prefix": "plm",
+        "body": [
+            "pub let mut ${1:name}: ${2:type} = ${3:value};"
+        ],
+        "description": "public let mut"
+    },
+    "if-let":{
+        "prefix": "il",
+        "body": [
+            "if let ${1:Some(${2:value})} = ${3:expression} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "if-let expression"
+    },
+
+    "let-else":{
+        "prefix": "le",
+        "body": [
+            "let ${1:name}: ${2:type} = ${3:value} else {",
+            "\t$4",
+            "}"
+        ],
+        "description": "let-else expression"
+    },
+    "match": {
+        "prefix": "m",
+        "body": [
+            "match ${1:expression} {",
+            "\t$2 => $3,",
+            "}"
+        ],
+        "description": "match expression"
+    },
+    "match-else": {
+        "prefix": "me",
+        "body": [
+            "match ${1:expression} {",
+            "\t$2 => $3,",
+            "\t_ => $4",
+            "}"
+        ],
+        "description": "match expression with else"
+    },
+    "if": {
+        "prefix": "if",
+        "body": [
+            "if ${1:condition} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "if expression"
+    },
+    "if-else": {
+        "prefix": "ie",
+        "body": [
+            "if ${1:condition} {",
+            "\t$2",
+            "} else {",
+            "\t$3",
+            "}"
+        ],
+        "description": "if-else expression"
+    },
+    "if-else-if": {
+        "prefix": "iee",
+        "body": [
+            "if ${1:condition} {",
+            "\t$2",
+            "} else if ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "if-else-if expression"
+    },
+    "if-else-if-else": {
+        "prefix": "ieee",
+        "body": [
+            "if ${1:condition} {",
+            "\t$2",
+            "} else if ${3:condition} {",
+            "\t$4",
+            "} else {",
+            "\t$5",
+            "}"
+        ],
+        "description": "if-else-if-else expression"
+    },
+    "for": {
+        "prefix": "f",
+        "body": [
+            "for ${1:element} in ${2:collection} {",
+            "\t$3",
+            "}"
+        ],
+        "description": "for expression"
+    },
+    "loop": {
+        "prefix": "lp",
+        "body": [
+            "loop {",
+            "\t$1",
+            "}"
+        ],
+        "description": "loop expression"
+    },
+    "while": {
+        "prefix": "w",
+        "body": [
+            "while ${1:condition} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "while expression"
+    },
+    "while-let": {
+        "prefix": "wl",
+        "body": [
+            "while let ${1:Some(${2:value})} = ${3:expression} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "while-let expression"
+    },
+    "unsafe-block": {
+        "prefix": "u",
+        "body": [
+            "unsafe {",
+            "\t$1",
+            "}"
+        ],
+        "description": "unsafe expression"
+    },
+    "unsafe-fn": {
+        "prefix": "uf",
+        "body": [
+            "unsafe fn ${1:name}(${2:args}) -> ${3:ret} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "unsafe function"
+    },
+    "unsafe-impl": {
+        "prefix": "ui",
+        "body": [
+            "unsafe impl ${1:Trait} for ${2:Type} {",
+            "\t$3",
+            "}"
+        ],
+        "description": "unsafe impl"
+    },
+    "unsafe-trait": {
+        "prefix": "ut",
+        "body": [
+            "unsafe trait ${1:Trait} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "unsafe trait"
+    },
+    "pub-impl" : {
+        "prefix": "pi",
+        "body": [
+            "pub impl ${1:Type} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "public impl"
+    },
+    "pub-impl-for" : {
+        "prefix": "pif",
+        "body": [
+            "pub impl ${1:Trait} for ${2:Type} {",
+            "\t$3",
+            "}"
+        ],
+        "description": "public impl for"
+    },
+    "pub-impl-for-where" : {
+        "prefix": "pifw",
+        "body": [
+            "pub impl ${1:Trait} for ${2:Type} where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public impl for where"
+    },
+    "pub-impl-generic": {
+        "prefix": "pig",
+        "body": [
+            "pub impl<${1:Generic}> ${2:Type} {",
+            "\t$3",
+            "}"
+        ],
+        "description": "public impl generic"
+    },
+    "pub-impl-generic-for": {
+        "prefix": "pigf",
+        "body": [
+            "pub impl<${1:Generic}> ${2:Trait} for ${3:Type} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public impl generic for"
+    },
+    "pub-impl-generic-for-where":{
+        "prefix": "pigfw",
+        "body": [
+            "pub impl<${1:Generic}> ${2:Trait} for ${3:Type} where ${4:condition} {",
+            "\t$5",
+            "}"
+        ],
+        "description": "public impl generic for where"
+    },
+    "impl-for": {
+        "prefix": "if",
+        "body": [
+            "impl ${1:Trait} for ${2:Type} {",
+            "\t$3",
+            "}"
+        ],
+        "description": "impl for"
+    },
+    "impl-for-where": {
+        "prefix": "ifw",
+        "body": [
+            "impl ${1:Trait} for ${2:Type} where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "impl for where"
+    },
+    "impl": {
+        "prefix": "i",
+        "body": [
+            "impl ${1:Type} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "impl"
+    },
+    "impl-generic": {
+        "prefix": "ig",
+        "body": [
+            "impl<${1:Generic}> ${2:Type}<${1:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "impl generic"
+    },
+    "impl-generic-for": {
+        "prefix": "igf",
+        "body": [
+            "impl<${1:Generic}> ${2:Trait} for ${3:Type}<${1:Generic}> {",
+            "\t$4",
+            "}"
+        ],
+        "description": "impl generic for"
+    },
+    "impl-generic-where": {
+        "prefix": "igw",
+        "body": [
+            "impl<${1:Generic}> ${2:Type}<${1:Generic}> where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "impl generic where"
+    },
+    "pub-trait": {
+        "prefix": "pt",
+        "body": [
+            "pub trait ${1:Trait} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "public trait"
+    },
+    "pub-trait-generic": {
+        "prefix": "ptg",
+        "body": [
+            "pub trait ${1:Trait}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "public trait generic"
+    },
+    "pub-trait-generic-where": {
+        "prefix": "ptgw",
+        "body": [
+            "pub trait ${1:Trait}<${2:Generic}> where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public trait generic where"
+    },
+    "trait":{
+        "prefix": "t",
+        "body": [
+            "trait ${1:Trait} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "trait"
+    },
+    "trait-generic": {
+        "prefix": "tg",
+        "body": [
+            "trait ${1:Trait}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "trait generic"
+    },
+    "trait-generic-where": {
+        "prefix": "tgw",
+        "body": [
+            "trait ${1:Trait}<${2:Generic}> where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "trait generic where"
+    },
+    "pub-struct": {
+        "prefix": "ps",
+        "body": [
+            "pub struct ${1:Name} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "public struct"
+    },
+    "struct": {
+        "prefix": "s",
+        "body": [
+            "struct ${1:Name} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "struct"
+    },
+    "pub-struct-generic": {
+        "prefix": "psg",
+        "body": [
+            "pub struct ${1:Name}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "public struct generic"
+    },
+    "struct-generic": {
+        "prefix": "sg",
+        "body": [
+            "struct ${1:Name}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "struct generic"
+    },
+    "pub-struct-generic-where": {
+        "prefix": "psgw",
+        "body": [
+            "pub struct ${1:Name}<${2:Generic}> where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public struct generic where"
+    },
+    "struct-generic-where": {
+        "prefix": "sgw",
+        "body": [
+            "struct ${1:Name}<${2:Generic}> where ${3:condition} {",
+            "\t$4",
+            "}"
+        ],
+        "description": "struct generic where"
+    },
+    "pub-enum": {
+        "prefix": "pe",
+        "body": [
+            "pub enum ${1:Name} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "public enum"
+    },
+    "enum": {
+        "prefix": "e",
+        "body": [
+            "enum ${1:Name} {",
+            "\t$2",
+            "}"
+        ],
+        "description": "enum"
+    },
+    "pub-enum-generic": {
+        "prefix": "peg",
+        "body": [
+            "pub enum ${1:Name}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "public enum generic"
+    },
+    "enum-generic": {
+        "prefix": "eg",
+        "body": [
+            "enum ${1:Name}<${2:Generic}> {",
+            "\t$3",
+            "}"
+        ],
+        "description": "enum generic"
+    },
+    "pub-enum-generic-where": {
+        "prefix": "pegw",
+        "body": [
+            "pub enum ${1:Name}<${2:Generic}: ${3:condition}> {",
+            "\t$4",
+            "}"
+        ],
+        "description": "public enum generic where"
+    },
+    "enum-generic-where": {
+        "prefix": "egw",
+        "body": [
+            "enum ${1:Name}<${2:Generic}: ${3:condition}> {",
+            "\t$4",
+            "}"
+        ],
+        "description": "enum generic where"
+    },
+    "pub-type": {
+        "prefix": "pty",
+        "body": [
+            "pub type ${1:Name} = ${2:Type};"
+        ],
+    },
+    "type":{
+        "prefix": "ty",
+        "body": [
+            "type ${1:Name} = ${2:Type};"
+        ],
+        "description": "type"
+    },
+    "pub-type-generic": {
+        "prefix": "ptyg",
+        "body": [
+            "pub type ${1:Name}: <${2:Generic}> = ${3:Type};"
+        ],
+        "description": "public type generic"
+    },
+    "type-generic": {
+        "prefix": "tyg",
+        "body": [
+            "type ${1:Name}:<${2:Generic}> = ${3:Type};"
+        ],
+        "description": "type generic"
+    }
+}
