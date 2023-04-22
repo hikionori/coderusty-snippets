@@ -3,9 +3,10 @@
   "displayName": "CodeRusty Snippets",
   "description": "Snippets for Rust Lang",
   "author": {"name": "Danila Verbinskiy", "email": "work.danv4656@gmail.com"},
+  "license": "MIT",
   "publisher": "hikionori",
   "icon": "icon.png",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/hikionori/coderusty-snippets.git"
